@@ -32,3 +32,18 @@ solution(numbers);
 //[1,11,13,4,6,42]이면 [1,11,13,4,42,6]으로 배열된다.
 
 //위 코드는 33점짜리 답..ㅠㅠ
+
+//sort()와 callback 함수에 대해 학습을하고옴.
+const numbers = [3, 30, 34, 5, 9]; //a,b일때 10,6 2,10 이렇게 순서가된다는걸기억
+function solution(numbers) {
+  numbers.sort(function (a, b) {
+    return String(a) + b > String(b) + a ? -1 : 1;
+  });
+  const answer = numbers.join("");
+  return numbers[0] === 0 ? 0 : answer;
+}
+
+solution(numbers);
+//해냈다!
+// 결국 sort 즉 , 정렬에 대한 지식이 부족했고
+// callbakck 함수에 대한 지식역시 부족했다.
