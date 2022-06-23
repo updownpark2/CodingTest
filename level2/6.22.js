@@ -14,18 +14,6 @@ function solution(clothes) {
   arr.sort(function (a, b) {
     return a > b ? 1 : -1; //['eyewear', 'headgear', 'headgear']
   });
-  for (i = 0; i < arr.length - 1; i++) {
-    if (arr[i] !== arr[i + 1]) {
-      arr2.push(i + 1);
-      arr2.push(sum);
-      sum = 0;
-    } else if (arr[i] === arr[i + 1]) {
-      sum = sum + 1;
-    }
-    arr2.push(sum);
-  }
-  console.log(arr);
-  console.log(arr2);
 }
 solution(clothes);
 //어떻게 로직을짤까
