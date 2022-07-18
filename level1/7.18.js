@@ -26,3 +26,17 @@ solution(nums);
 
 //nums는 포켓몬 종류와 갯수를 의미
 //result는 결국 최대 종류 수
+//성공
+
+//level1 핸드폰 번호 가리기
+const phone_number = "01033334444";
+function solution(phone_number) {
+  const arr = [...phone_number];
+  console.log(arr);
+  for (i = arr.length - 5; i >= 0; i--) {
+    arr[i] = "*";
+  }
+  const answer = arr.join("");
+  return answer;
+}
+solution(phone_number);
