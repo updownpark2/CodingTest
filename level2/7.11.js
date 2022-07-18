@@ -45,8 +45,12 @@ function solution(people, limit) {
       if (small[i] + big[j] <= limit) {
         small.splice(i, 1);
         big.splice(j, 1);
+        count = count + 1;
+        i = 0;
+        j = big.length - 1;
       }
     }
   }
+  console.log(count);
 }
 solution(people, limit);
